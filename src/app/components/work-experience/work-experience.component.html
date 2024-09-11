@@ -1,0 +1,58 @@
+<div>
+  <div *ngFor="let job of workExperience" class="work-experience-container">
+    <a [href]="job.website" target="_blank">
+      <img
+        *ngIf="job.logo"
+        src="/{{ job.logo }}"
+        alt="{{ job.logo }}"
+        class="job-logo-image"
+        [class.needs-background]="job.needsBackground"
+      />
+    </a>
+    <div>
+      <div class="work-experience-header">
+        <h2 class="job-title">{{ job.title }}</h2>
+        <span class="job-position">{{ job.position }}</span>
+      </div>
+      <div class="work-experience-body">
+        <div>
+          <span>{{ job.startDate | date }} - </span>
+          <ng-container *ngIf="job.endDate === 'PRESENT'; else endDate">
+            Present
+          </ng-container>
+          <ng-template #endDate>
+            <span *ngIf="job.endDate"> {{ job.endDate | date }}</span>
+          </ng-template>
+          ({{ job.startDate | dateDifference : job.endDate }})
+        </div>
+        <div class="job-description">
+          {{ job.description }}
+        </div>
+        <div class="job-references-list">
+          <img
+            *ngFor="let tech of job.technologies"
+            src="/{{ tech.icon }}"
+            class="tech-icon"
+            matTooltip="{{ tech.label }}"
+          />
+        </div>
+        <div *ngIf="job.references">
+          <h4>References</h4>
+          <div *ngFor="let contact of job.references" class="reference relative">
+            <span class="reference-name">{{ contact.person }}</span>
+            - <span class="reference-role">{{ contact.role }}</span>
+            <fa-icon
+              [icon]="faChevronDown"
+              class="reference-icon pointer"
+              matTooltip=""
+            ></fa-icon>
+            <div class="reference-contact">
+              <div>Email: {{ contact.email }}</div>
+              <div>{{ contact.phoneNumber }}</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

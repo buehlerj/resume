@@ -1,0 +1,39 @@
+@import "../styles.scss";
+
+#side-navbar {
+  width: 70px;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  text-align: center;
+  background-color: $navbarBackground;
+}
+
+.navbar-icon {
+  font-size: 51px;
+  margin: 5px 5px;
+  display: inline-block;
+  cursor: pointer;
+  transition: 150ms ease-in-out all;
+
+  &:hover {
+    font-size: 70px;
+    margin: 0;
+  }
+}
+
+#footer-icons {
+  position: absolute;
+  bottom: 7px;
+}
+
+.footer-icon {
+  font-size: 29px;
+  margin: 5px 5px;
+  cursor: pointer;
+}
+
+#router-body {
+  margin-left: 70px;
+}

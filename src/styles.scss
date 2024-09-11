@@ -1,1 +1,46 @@
-/* You can add global styles to this file, and also import other style files */
+$mainBackground: #ece9e0;
+$mainColor: #4c4c4c;
+$navbarBackground: #989373;
+
+@import '@angular/material/prebuilt-themes/rose-red.css';
+
+body {
+  position: absolute;
+  background: $mainBackground;
+  color: $mainColor;
+  margin: 0;
+  font-family: "Lato", Roboto, "Helvetica Neue", sans-serif;
+  font-style: normal;
+}
+
+a {
+  color: #045f75;
+  text-decoration: none;
+  transition: 125ms linear color;
+
+  &:hover {
+    color: #088dad;
+  }
+}
+
+// Globals
+.absolute {
+  position: absolute;
+}
+
+.relative {
+  position: relative;
+}
+
+.pointer {
+  cursor: pointer;
+}
+
+// Grid
+.align-items-center {
+  align-items: center;
+}
+
+.align-self-center {
+  align-self: center;
+}

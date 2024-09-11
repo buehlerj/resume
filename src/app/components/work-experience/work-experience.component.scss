@@ -1,0 +1,87 @@
+@import "../../../styles.scss";
+
+.work-experience-container {
+  display: grid;
+  grid-template-columns: 500px 1fr;
+  align-items: center;
+  grid-gap: 65px;
+  padding: 6px 17px;
+  width: 65%;
+  margin: 175px auto;
+}
+
+.work-experience-header {
+  margin-bottom: 21px;
+}
+
+.job-logo-image {
+  width: -webkit-fill-available;
+
+  &.needs-background {
+    background: rgba($navbarBackground, 0.42);
+    padding: 12px;
+  }
+}
+
+.job-title {
+  display: inline-block;
+  margin: 0;
+}
+
+.job-position {
+  margin-left: 12px;
+  font-style: italic;
+}
+
+.job-description {
+  margin: 10px 0;
+}
+
+.work-experience-body {
+  margin-left: 49px;
+}
+
+.tech-icon {
+  width: 77px;
+}
+
+.job-references-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.reference {
+  margin-left: 20px;
+
+  &:hover {
+    .reference-contact {
+      opacity: 1;
+    }
+  }
+}
+
+.reference-name {
+  font-weight: bold;
+}
+
+.reference-role {
+  font-style: italic;
+}
+
+.reference-icon {
+  margin-left: 7px;
+}
+
+.reference-contact {
+  position: absolute;
+  background-color: $navbarBackground;
+  padding: 8px 16px;
+  margin-left: 32px;
+  border-radius: 18px;
+  opacity: 0;
+  z-index: 1;
+  transition: 150ms ease-in-out opacity;
+}
