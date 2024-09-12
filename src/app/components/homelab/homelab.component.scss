@@ -1,0 +1,19 @@
+@import "../../../styles.scss";
+
+#homelab {
+  color: $homelabColor;
+}
+
+.homelab-container {
+  grid-template-rows: auto auto 1fr;
+  justify-items: center;
+  grid-gap: 24px;
+  padding: 6px 17px;
+  width: 65%;
+  margin:  70px auto 175px;
+}
+
+.homelab-logo {
+  max-height: 100%;
+  max-width: 800px;
+}

@@ -1,1 +1,7 @@
-<p>homelab works!</p>
+<div class="inline-block full-width" id="homelab">
+  <div *ngFor="let project of homelabProjects" class="grid homelab-container">
+    <h1>{{ project.label }}</h1>
+    <img class="homelab-logo" [src]="project.logo" />
+    <div>{{ project.description }}</div>
+  </div>
+</div>

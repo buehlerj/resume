@@ -7,8 +7,8 @@ $workExperienceColor: #ece9e0;
 $personalProjectsBackground: #e0dbcc;
 $personalProjectsColor: #4c4c4c;
 
-$homeLabBackground: #c2c2c2;
-$homeLabColor: #4c4c4c;
+$homelabBackground: #c2c2c2;
+$homelabColor: #4c4c4c;
 
 $navbarBackground: #989373;
 $mainColor: #ece9e0;
@@ -19,6 +19,7 @@ body {
   margin: 0;
   font-family: "Lato", Roboto, "Helvetica Neue", sans-serif !important;
   font-style: normal;
+  width: 100%;
 }
 
 a {
