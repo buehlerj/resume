@@ -1,15 +1,17 @@
-$mainBackground: #ece9e0;
+$workExperienceBackground: #4C4C4C;
+$personalProjectsBackground: #D5D5BD;
+
+$aboutMeBackground: #4C4C4C;
+$aboutMeColor: #ECE9E0;
+
 $mainColor: #4c4c4c;
 $navbarBackground: #989373;
 
-@import '@angular/material/prebuilt-themes/rose-red.css';
-
 body {
   position: absolute;
-  background: $mainBackground;
   color: $mainColor;
   margin: 0;
-  font-family: "Lato", Roboto, "Helvetica Neue", sans-serif;
+  font-family: "Lato", Roboto, "Helvetica Neue", sans-serif !important;
   font-style: normal;
 }
 
@@ -30,6 +32,14 @@ a {
 
 .relative {
   position: relative;
+}
+
+.fixed {
+  position: fixed;
+}
+
+.inline-block {
+  display: inline-block;
 }
 
 .pointer {

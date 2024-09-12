@@ -1,7 +1,13 @@
-<div id="side-navbar">
-  <fa-icon [icon]="faIdBadge" routerLink="/" class="navbar-icon" />
-  <fa-icon [icon]="faFile" routerLink="/work" class="navbar-icon" />
-  <fa-icon [icon]="faServer" routerLink="/projects" class="navbar-icon" />
+<div class="fixed" id="side-navbar">
+  <fa-icon
+    *ngFor="let nav of navbarItems"
+    class="navbar-icon"
+    [icon]="nav.icon"
+    [routerLink]="nav.route"
+    [matTooltip]="nav.label"
+    matTooltipPosition="right"
+  >
+  </fa-icon>
 
   <div id="footer-icons">
     <a target="_blank" href="https://www.linkedin.com/in/jeffrey-buehler/">
@@ -13,6 +19,6 @@
   </div>
 </div>
 
-<div id="router-body">
+<div class="inline-block" id="router-body">
   <router-outlet />
 </div>

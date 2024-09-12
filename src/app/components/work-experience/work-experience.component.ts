@@ -66,7 +66,6 @@ export class WorkExperienceComponent {
             email: '',
           },
         ],
-        needsBackground: true,
       },
       {
         title: 'Encompass Technologies Development, Inc.',
@@ -92,7 +91,8 @@ export class WorkExperienceComponent {
         position: 'Software Developer Intern',
         startDate: new Date(2015, 6, 15),
         endDate: new Date(2017, 5, 30),
-        description: 'Worked in a fully agile environment. Websites that I developed were used by my internal organization of ~150 employees. Learned Docker imaging for deployment.',
+        description:
+          'Worked in a fully agile environment. Websites that I developed were used by my internal organization of ~150 employees. Learned Docker imaging for deployment.',
         email: '',
         phone: '',
         address: '3404 E Harmony Rd, Fort Collins, Co 80528',

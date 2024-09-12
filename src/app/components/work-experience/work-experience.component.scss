@@ -16,10 +16,17 @@
 
 .job-logo-image {
   width: -webkit-fill-available;
+  padding: 12px;
+  border-radius: 9px;
+  transition: 200ms linear background-color;
 
   &.needs-background {
-    background: rgba($navbarBackground, 0.42);
+    background: rgba($workExperienceBackground, 0.42);
     padding: 12px;
+  }
+
+  &:hover {
+    background-color: lighten($workExperienceBackground, 4);
   }
 }
 

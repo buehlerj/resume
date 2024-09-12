@@ -1,4 +1,4 @@
-<div>
+<div class="inline-block">
   <div *ngFor="let job of workExperience" class="work-experience-container">
     <a [href]="job.website" target="_blank">
       <img
@@ -6,7 +6,6 @@
         src="/{{ job.logo }}"
         alt="{{ job.logo }}"
         class="job-logo-image"
-        [class.needs-background]="job.needsBackground"
       />
     </a>
     <div>
@@ -38,7 +37,10 @@
         </div>
         <div *ngIf="job.references">
           <h4>References</h4>
-          <div *ngFor="let contact of job.references" class="reference relative">
+          <div
+            *ngFor="let contact of job.references"
+            class="reference relative"
+          >
             <span class="reference-name">{{ contact.person }}</span>
             - <span class="reference-role">{{ contact.role }}</span>
             <fa-icon
