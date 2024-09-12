@@ -45,6 +45,7 @@ export class WorkExperienceComponent {
           { label: 'Angular', icon: 'tech/angular.png' },
           { label: 'Visual Studio', icon: 'tech/visualstudio.png' },
           { label: 'SQL Server', icon: 'tech/sqlserver.png' },
+          { label: 'GitHub', icon: 'tech/github.png' },
         ],
         references: [
           {

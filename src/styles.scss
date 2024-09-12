@@ -83,3 +83,10 @@ a {
 .tech-icon {
   height: 70px;
 }
+
+// Tooltips
+::ng-deep .cdk-overlay-pane {
+  position: fixed;
+  background-color: darken($navbarBackground, 20);
+  border-radius: 6px;
+}
