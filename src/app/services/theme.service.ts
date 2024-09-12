@@ -16,19 +16,18 @@ export class ThemeService {
 
   updateBackgroundColor(url: string) {
     let backgroundColor = '';
-    let fontColor = '';
     switch (url) {
       case '/':
         backgroundColor = '#D5D5BD';
-        fontColor = '#4C4C4C';
         break;
       case '/work':
         backgroundColor = '#4C4C4C';
-        fontColor = '#ECE9E0';
         break;
       case '/projects':
-        backgroundColor = '#ECE9E0';
-        fontColor = '#4C4C4C';
+        backgroundColor = '#E0DBCC';
+        break;
+      case '/homelab':
+        backgroundColor = '#C2C2C2';
         break;
       default:
         backgroundColor = 'white';

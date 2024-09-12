@@ -1,14 +1,17 @@
-$aboutMeBackground: #D5D5BD;
-$aboutMeColor: #4C4C4C;
+$aboutMeBackground: #d5d5bd;
+$aboutMeColor: #4c4c4c;
 
-$workExperienceBackground: #4C4C4C;
-$workExperienceColor: #ECE9E0;
+$workExperienceBackground: #4c4c4c;
+$workExperienceColor: #ece9e0;
 
-$personalProjectsBackground: #ECE9E0;
-$personalProjectsColor: #4C4C4C;
+$personalProjectsBackground: #e0dbcc;
+$personalProjectsColor: #4c4c4c;
+
+$homeLabBackground: #c2c2c2;
+$homeLabColor: #4c4c4c;
 
 $navbarBackground: #989373;
-$mainColor: #4c4c4c;
+$mainColor: #ece9e0;
 
 body {
   position: absolute;
@@ -50,10 +53,32 @@ a {
 }
 
 // Grid
+.grid {
+  display: grid;
+}
+
 .align-items-center {
   align-items: center;
 }
 
 .align-self-center {
   align-self: center;
+}
+
+// Utils
+.full-width {
+  width: 100%;
+}
+
+//
+.job-references-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.tech-icon {
+  height: 70px;
 }

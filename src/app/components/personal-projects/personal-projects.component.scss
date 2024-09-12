@@ -1,5 +1,37 @@
-@import '../../../styles.scss';
+@import "../../../styles.scss";
 
 #personal-projects {
   color: $personalProjectsColor;
+}
+
+.personal-project-container {
+  width: 65%;
+  margin: 97px auto 248px;
+}
+
+.github-icon {
+  font-size: 2em;
+  margin-left: 23px;
+}
+
+.personal-project-description {
+  grid-gap: 28px;
+  margin-bottom: 47px;
+  align-items: center;
+}
+
+.personal-project-description-odd {
+  grid-template-columns: 1fr 300px;
+}
+
+.personal-project-description-even {
+  grid-template-columns: 300px 1fr;
+}
+
+.personal-project-description-image {
+  width: 100;
+}
+
+.job-references-list {
+  margin-bottom: 35px;
 }

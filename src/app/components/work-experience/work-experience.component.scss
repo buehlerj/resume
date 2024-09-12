@@ -5,7 +5,6 @@
 }
 
 .work-experience-container {
-  display: grid;
   grid-template-columns: 500px 1fr;
   align-items: center;
   grid-gap: 65px;
@@ -50,18 +49,6 @@
 
 .work-experience-body {
   margin-left: 49px;
-}
-
-.tech-icon {
-  width: 77px;
-}
-
-.job-references-list {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .reference {

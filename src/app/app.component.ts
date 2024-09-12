@@ -5,6 +5,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import {
   faFile,
   faServer,
+  faCode,
   faHome,
   faIdBadge,
 } from '@fortawesome/free-solid-svg-icons';
@@ -26,18 +27,21 @@ import { ThemeService } from './services/theme.service';
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title = 'resume-landing';
-  navbarItems: any[];
+  // Icons
   faGithub = faGithub;
   faLinkedin = faLinkedin;
   faHome = faHome;
+
+  // Class
+  title = 'resume-landing';
+  navbarItems: any[];
 
   constructor(private themeService: ThemeService) {
     this.navbarItems = [
       { label: 'About Jeff', icon: faIdBadge, route: '/' },
       { label: 'Work Experience', icon: faFile, route: '/work' },
-      { label: 'Personal Projects', icon: faServer, route: '/projects' },
+      { label: 'Personal Projects', icon: faCode, route: '/projects' },
+      { label: 'Home Lab', icon: faServer, route: '/homelab' },
     ];
-    console.log(this.navbarItems);
   }
 }

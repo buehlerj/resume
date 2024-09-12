@@ -30,7 +30,7 @@ export class WorkExperienceComponent {
     this.workExperience = [
       {
         title: 'Apollo Enterprise Imaging Corp',
-        logo: 'apollo-logo.png',
+        logo: 'companies/apollo-logo.png',
         position: 'Lead Software Developer',
         startDate: new Date(2017, 9, 25),
         endDate: 'PRESENT',
@@ -42,9 +42,9 @@ export class WorkExperienceComponent {
         backgroundColor: '#6d4a06',
         website: 'https://apolloei.com/',
         technologies: [
-          { label: 'Angular', icon: 'angular.png' },
-          { label: 'Visual Studio', icon: 'visualstudio.png' },
-          { label: 'SQL Server', icon: 'sqlserver.png' },
+          { label: 'Angular', icon: 'tech/angular.png' },
+          { label: 'Visual Studio', icon: 'tech/visualstudio.png' },
+          { label: 'SQL Server', icon: 'tech/sqlserver.png' },
         ],
         references: [
           {
@@ -69,7 +69,7 @@ export class WorkExperienceComponent {
       },
       {
         title: 'Encompass Technologies Development, Inc.',
-        logo: 'encompass-logo.png',
+        logo: 'companies/encompass-logo.png',
         position: 'Software Developer Intern',
         startDate: new Date(2017, 6, 5),
         endDate: new Date(2017, 10, 6),
@@ -81,13 +81,13 @@ export class WorkExperienceComponent {
         backgroundColor: '#073d87',
         website: 'https://www.encompasstech.com/',
         technologies: [
-          { label: 'SVN', icon: 'svn.png' },
-          { label: 'SQL', icon: 'sql.png' },
+          { label: 'SVN', icon: 'tech/svn.png' },
+          { label: 'SQL', icon: 'tech/sql.png' },
         ],
       },
       {
         title: 'Hewlett Packard/Hewlett Packard Enterprise',
-        logo: 'hewlett-packad-enterprise-logo.png',
+        logo: 'companies/hewlett-packad-enterprise-logo.png',
         position: 'Software Developer Intern',
         startDate: new Date(2015, 6, 15),
         endDate: new Date(2017, 5, 30),
@@ -99,8 +99,8 @@ export class WorkExperienceComponent {
         backgroundColor: '#03614b',
         website: 'https://www.hpe.com/us/en/home.html',
         technologies: [
-          { label: 'Ruby on Rails', icon: 'rubyonrails.png' },
-          { label: 'Docker', icon: 'docker.png' },
+          { label: 'Ruby on Rails', icon: 'tech/rubyonrails.png' },
+          { label: 'Docker', icon: 'tech/docker.png' },
         ],
       },
     ];

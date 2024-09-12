@@ -1,3 +1,56 @@
 <div class="inline-block" id="personal-projects">
+  <div *ngFor="let project of projects" class="personal-project-container">
+    <div>
+      <a
+        *ngIf="project.link; else noLinkLabel"
+        target="_blank"
+        [href]="project.link"
+      >
+        <h1 class="inline-block">{{ project.label }}</h1>
+      </a>
+      <ng-template #noLinkLabel>
+        <h1 class="inline-block">{{ project.label }}</h1>
+      </ng-template>
+      <a target="_blank" [href]="project.githubLink">
+        <fa-icon [icon]="faGithub" class="pointer github-icon"></fa-icon>
+      </a>
 
+      <div class="job-references-list">
+        <img
+          *ngFor="let tech of project.technologies"
+          src="/{{ tech.icon }}"
+          class="tech-icon"
+          matTooltip="{{ tech.label }}"
+        />
+      </div>
+      <div
+        class="grid personal-project-description personal-project-description-even"
+        *ngIf="project.description1"
+      >
+        <img class="full-width" [src]="project.descriptionImage1" />
+        <div>{{ project.description1 }}</div>
+      </div>
+      <div
+        class="grid personal-project-description personal-project-description-odd"
+        *ngIf="project.description2"
+      >
+        <div>{{ project.description2 }}</div>
+        <img class="full-width" [src]="project.descriptionImage2" />
+      </div>
+      <div
+        class="grid personal-project-description personal-project-description-even"
+        *ngIf="project.description3"
+      >
+        <img class="full-width" [src]="project.descriptionImage3" />
+        <div>{{ project.description3 }}</div>
+      </div>
+      <div
+        class="grid personal-project-description personal-project-description-odd"
+        *ngIf="project.description4"
+      >
+        <div>{{ project.description4 }}</div>
+        <img class="full-width" [src]="project.descriptionImage4" />
+      </div>
+    </div>
+  </div>
 </div>
