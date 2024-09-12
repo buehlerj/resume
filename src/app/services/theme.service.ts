@@ -35,6 +35,5 @@ export class ThemeService {
         break;
     }
     document.body.style.backgroundColor = backgroundColor;
-    document.body.style.color = fontColor;
   }
 }

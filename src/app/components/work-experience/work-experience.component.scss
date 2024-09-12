@@ -1,5 +1,9 @@
 @import "../../../styles.scss";
 
+#work-experience {
+  color: $workExperienceColor;
+}
+
 .work-experience-container {
   display: grid;
   grid-template-columns: 500px 1fr;
