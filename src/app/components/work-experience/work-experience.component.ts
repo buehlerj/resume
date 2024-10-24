@@ -26,7 +26,7 @@ export class WorkExperienceComponent {
 
   textToCopy: string = '';
 
-  private constructor() {
+  constructor() {
     this.workExperience = [
       {
         title: 'Apollo Enterprise Imaging Corp',

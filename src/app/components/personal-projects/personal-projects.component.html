@@ -23,34 +23,56 @@
           matTooltip="{{ tech.label }}"
         />
       </div>
-      <div
-        class="grid personal-project-description personal-project-description-even"
-        *ngIf="project.description1"
+
+      <ng-container
+        *ngFor="let description of project.descriptions; let index = index"
       >
-        <img class="full-width" [src]="project.descriptionImage1" />
-        <div>{{ project.description1 }}</div>
-      </div>
-      <div
-        class="grid personal-project-description personal-project-description-odd"
-        *ngIf="project.description2"
-      >
-        <div>{{ project.description2 }}</div>
-        <img class="full-width" [src]="project.descriptionImage2" />
-      </div>
-      <div
-        class="grid personal-project-description personal-project-description-even"
-        *ngIf="project.description3"
-      >
-        <img class="full-width" [src]="project.descriptionImage3" />
-        <div>{{ project.description3 }}</div>
-      </div>
-      <div
-        class="grid personal-project-description personal-project-description-odd"
-        *ngIf="project.description4"
-      >
-        <div>{{ project.description4 }}</div>
-        <img class="full-width" [src]="project.descriptionImage4" />
-      </div>
+        <ng-container *ngIf="index % 2 === 0; else oddDescription">
+          <ng-container
+            [ngTemplateOutlet]="personalProjectDetailsImageFirst"
+            [ngTemplateOutletContext]="{
+              description: description.text,
+              image: description.image
+            }"
+          />
+        </ng-container>
+        <ng-template #oddDescription>
+          <ng-container
+            [ngTemplateOutlet]="personalProjectDetailsDetailsFirst"
+            [ngTemplateOutletContext]="{
+              description: description.text,
+              image: description.image
+            }"
+          />
+        </ng-template>
+      </ng-container>
     </div>
   </div>
+
+  <ng-template
+    #personalProjectDetailsImageFirst
+    let-description="description"
+    let-image="image"
+  >
+    <div
+      class="grid personal-project-description personal-project-description-even"
+      *ngIf="description"
+    >
+      <img class="full-width" [src]="image" />
+      <div>{{ description }}</div>
+    </div>
+  </ng-template>
+  <ng-template
+    #personalProjectDetailsDetailsFirst
+    let-description="description"
+    let-image="image"
+  >
+    <div
+      class="grid personal-project-description personal-project-description-odd"
+      *ngIf="description"
+    >
+      <div>{{ description }}</div>
+      <img class="full-width" [src]="image" />
+    </div>
+  </ng-template>
 </div>

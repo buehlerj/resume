@@ -2,10 +2,11 @@
   <fa-icon
     *ngFor="let nav of navbarItems"
     class="navbar-icon"
+    [class.active]="nav.route === selectedNav"
     [icon]="nav.icon"
-    [routerLink]="nav.route"
     [matTooltip]="nav.label"
     matTooltipPosition="right"
+    (click)="routeToNavItem(nav)"
   >
   </fa-icon>
 

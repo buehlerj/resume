@@ -1,4 +1,5 @@
-import { Injectable } from '@angular/core';
+import { isPlatformBrowser } from '@angular/common';
+import { Inject, Injectable, PLATFORM_ID } from '@angular/core';
 import { NavigationEnd, Router } from '@angular/router';
 import { filter } from 'rxjs';
 
@@ -6,7 +7,10 @@ import { filter } from 'rxjs';
   providedIn: 'root',
 })
 export class ThemeService {
-  constructor(private router: Router) {
+  constructor(
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private router: Router
+  ) {
     this.router.events
       .pipe(filter((event) => event instanceof NavigationEnd))
       .subscribe((event: NavigationEnd) => {
@@ -33,6 +37,9 @@ export class ThemeService {
         backgroundColor = 'white';
         break;
     }
-    document.body.style.backgroundColor = backgroundColor;
+
+    if (isPlatformBrowser(this.platformId)) {
+      document.body.style.backgroundColor = backgroundColor;
+    }
   }
 }

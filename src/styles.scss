@@ -13,6 +13,9 @@ $homelabColor: #4c4c4c;
 $navbarBackground: #989373;
 $mainColor: #ece9e0;
 
+$linkColor: #045f75;
+$linkColorHover: #088dad;
+
 body {
   position: absolute;
   color: $mainColor;
@@ -23,13 +26,32 @@ body {
 }
 
 a {
-  color: #045f75;
+  color: $linkColor;
   text-decoration: none;
   transition: 125ms linear color;
 
   &:hover {
-    color: #088dad;
+    color: $linkColorHover;
   }
+}
+
+// Scrollbar
+::-webkit-scrollbar {
+  height: 9px;
+  width: 7px;
+  background: transparent
+}
+::-webkit-scrollbar-corner {
+  background: rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-track {
+  background: rgba(0,0,0,0.5);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background: linear-gradient(to right, rgb(29 163 249 / 77%), rgb(172 7 172 / 53%))
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, rgb(29 163 249 / 77%), rgb(172 7 172 / 53%))
 }
 
 // Globals

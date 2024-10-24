@@ -1,3 +1,29 @@
 <div class="inline-block" id="about-me">
-  Nothing here yet, check out the other navbar items though! :)
+  <div
+    *ngFor="let aboutMe of aboutMePoints; let index = index"
+    class="grid align-items-center about-me-container"
+    id="about-me-{{ aboutMe.id }}"
+  >
+    <ng-container *ngIf="index % 2 === 0; else oddTemplate">
+      <ng-container
+        [ngTemplateOutlet]="aboutMeDetails"
+        [ngTemplateOutletContext]="{aboutMe}"
+      />
+      <img [src]="aboutMe.image" class="about-me-image" />
+    </ng-container>
+    <ng-template #oddTemplate>
+      <img [src]="aboutMe.image" class="about-me-image" />
+      <ng-container
+        [ngTemplateOutlet]="aboutMeDetails"
+        [ngTemplateOutletContext]="{aboutMe}"
+      />
+    </ng-template>
+  </div>
+
+  <ng-template #aboutMeDetails let-aboutMe="aboutMe">
+    <div>
+      <h1 class="about-me-label">{{ aboutMe.label }}</h1>
+      {{ aboutMe.description }}
+    </div>
+  </ng-template>
 </div>

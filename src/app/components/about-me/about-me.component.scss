@@ -2,4 +2,21 @@
 
 #about-me {
   color: $aboutMeColor;
+  padding: 0 70px;
+}
+
+.about-me-container {
+  grid-template-columns: 1fr 1fr;
+  margin: 25px auto 60px;
+  grid-gap: 27px;
+  height: 100vh;
+}
+
+.about-me-label {
+  font-size: 4em;
+}
+
+.about-me-image {
+  max-width: 95%;
+  max-height: 95vh;
 }

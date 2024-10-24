@@ -21,6 +21,14 @@
     font-size: 70px;
     margin: 6px 5px;
   }
+
+  &.active {
+    color: $linkColor;
+
+    &:hover {
+      color: $linkColorHover;
+    }
+  }
 }
 
 #footer-icons {
